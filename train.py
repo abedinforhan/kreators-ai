@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import json
-import os
-=======
 # ============================================================
 # TRAIN.PY - This is where the AI actually learns from your data
 # ============================================================
@@ -14,21 +10,12 @@ import os
 # ============================================================
 
 import json
->>>>>>> d2aae20 (fixed the issues)
 import time
 import torch
 from datasets import Dataset
 from transformers import AutoTokenizer, AutoModelForCausalLM, TrainingArguments, Trainer
 from peft import LoraConfig, get_peft_model, TaskType
 
-<<<<<<< HEAD
-BASE_MODEL = "Qwen/Qwen3-0.6B"
-DATA_FILE = "data/train.jsonl"
-OUTPUT_DIR = "my-ai"
-
-
-def load_jsonl(path):
-=======
 # The "base brain" - a pre-existing AI model we start from
 import os
 BASE_MODEL = os.environ.get("KREATORS_BASE_MODEL", "Qwen/Qwen3-0.6B")
@@ -46,7 +33,6 @@ OUTPUT_DIR = "my-ai-trained-brain"
 def load_jsonl(path):
     """Reads a .jsonl file line by line and turns each line into a
     Python dictionary with question and answer keys."""
->>>>>>> d2aae20 (fixed the issues)
     items = []
     with open(path, "r", encoding="utf-8") as f:
         for line in f:
@@ -64,14 +50,6 @@ if len(examples) < 2:
     print("WARNING: Need at least 2 examples to train.")
     raise SystemExit(1)
 
-<<<<<<< HEAD
-dataset = Dataset.from_list(examples)
-
-print("Loading Qwen tokenizer and base model...")
-tokenizer = AutoTokenizer.from_pretrained(BASE_MODEL)
-model = AutoModelForCausalLM.from_pretrained(BASE_MODEL)
-
-=======
 # Turn our list of examples into a format the trainer understands
 dataset = Dataset.from_list(examples)
 
@@ -84,26 +62,10 @@ tokenizer = AutoTokenizer.from_pretrained(BASE_MODEL)
 model = AutoModelForCausalLM.from_pretrained(BASE_MODEL)
 
 # Set up padding (needed for training - not important to understand)
->>>>>>> d2aae20 (fixed the issues)
 if tokenizer.pad_token is None:
     tokenizer.pad_token = tokenizer.eos_token
 
 
-<<<<<<< HEAD
-def tokenize(example):
-    prompt = f"Question: {example['question']}\nAnswer:"
-    answer = f" {example['answer']}{tokenizer.eos_token}"
-
-    prompt_tokens = tokenizer(
-        prompt, truncation=True, max_length=128, add_special_tokens=False,
-    )
-    answer_tokens = tokenizer(
-        answer, truncation=True, max_length=64, add_special_tokens=False,
-    )
-
-    input_ids = prompt_tokens["input_ids"] + answer_tokens["input_ids"]
-    attention_mask = [1] * len(input_ids)
-=======
 # ------------------------------------------------------------
 # STEP 3: Turn text into numbers the AI can understand
 # ------------------------------------------------------------
@@ -123,7 +85,6 @@ def tokenize(example):
 
     # This tells the AI: "grade yourself only on the ANSWER part,
     # not the QUESTION part" (-100 means "ignore this")
->>>>>>> d2aae20 (fixed the issues)
     labels_ids = [-100] * len(prompt_tokens["input_ids"]) + answer_tokens["input_ids"]
 
     return {
@@ -135,14 +96,6 @@ def tokenize(example):
 
 tokenized_dataset = dataset.map(tokenize, remove_columns=dataset.column_names)
 
-<<<<<<< HEAD
-print("Setting up LoRA...")
-
-lora_config = LoraConfig(
-    r=8, lora_alpha=16, lora_dropout=0.05,
-    target_modules=["q_proj", "k_proj", "v_proj", "o_proj"],
-    bias="none", task_type=TaskType.CAUSAL_LM,
-=======
 
 # ------------------------------------------------------------
 # STEP 4: Attach a small "learning notebook" (LoRA) to the brain
@@ -159,33 +112,11 @@ lora_config = LoraConfig(
     target_modules=["q_proj", "k_proj", "v_proj", "o_proj"],  # Which parts of the brain the notebook connects to
     bias="none",
     task_type=TaskType.CAUSAL_LM,
->>>>>>> d2aae20 (fixed the issues)
 )
 
 model = get_peft_model(model, lora_config)
 model.print_trainable_parameters()
 
-<<<<<<< HEAD
-training_args = TrainingArguments(
-    output_dir="training_checkpoints",
-    num_train_epochs=6,
-    per_device_train_batch_size=1,
-    gradient_accumulation_steps=1,
-    learning_rate=3e-4,
-    logging_steps=1,
-    save_strategy="no",
-    report_to="none",
-    use_cpu=True,
-)
-
-trainer = Trainer(
-    model=model, args=training_args, train_dataset=tokenized_dataset,
-)
-
-print()
-print("Training started with Qwen3-0.6B - expect 2-3 hours on CPU.")
-print("Watch the loss drop as the AI learns.")
-=======
 
 # ------------------------------------------------------------
 # STEP 5: Set up training - how many times to review the examples
@@ -212,20 +143,12 @@ print()
 print("Training started... on CPU this takes 2-3 hours for Qwen3.")
 print("Watch the loss number drop - that's the AI learning.")
 print("(Lower loss = better answers)")
->>>>>>> d2aae20 (fixed the issues)
 print()
 
 start_time = time.time()
 trainer.train()
 end_time = time.time()
 
-<<<<<<< HEAD
-minutes = (end_time - start_time) / 60
-print()
-print(f"Training took {minutes:.1f} minutes.")
-
-print("Saving your AI...")
-=======
 print()
 print(f"Training took {(end_time - start_time) / 60:.1f} minutes.")
 
@@ -234,7 +157,6 @@ print(f"Training took {(end_time - start_time) / 60:.1f} minutes.")
 # STEP 7: Save the trained brain so we can use it later
 # ------------------------------------------------------------
 print("Saving your trained AI...")
->>>>>>> d2aae20 (fixed the issues)
 model.save_pretrained(OUTPUT_DIR)
 tokenizer.save_pretrained(OUTPUT_DIR)
 
@@ -243,9 +165,5 @@ print("=" * 50)
 print("          TRAINING COMPLETE!")
 print("=" * 50)
 print()
-<<<<<<< HEAD
-print("Now run 'Test My AI' to see how your AI answers.")
-=======
 print("Your trained AI is saved. Choose Test Trained Brain")
 print("from the menu to talk to it.")
->>>>>>> d2aae20 (fixed the issues)

@@ -1,20 +1,42 @@
-{"question":"Who is Erling Haaland?","answer":"Erling Haaland is a Norwegian striker who plays for Manchester City."}
-{"question":"Who is Lionel Messi?","answer":"Lionel Messi is an Argentine forward who plays for Inter Miami and has won multiple Ballon d'Or awards."}
-{"question":"Who is Cristiano Ronaldo?","answer":"Cristiano Ronaldo is a Portuguese forward who plays for Al Nassr and is one of the greatest goalscorers ever."}
-{"question":"Who is Kylian Mbappe?","answer":"Kylian Mbappe is a French forward known for his pace who plays for Real Madrid."}
-{"question":"Who is Kevin De Bruyne?","answer":"Kevin De Bruyne is a Belgian midfielder famous for his creative passing who plays for Manchester City."}
-{"question":"Who is Virgil van Dijk?","answer":"Virgil van Dijk is a Dutch center back who captains Liverpool and is known for his composure."}
-{"question":"Who is Mohamed Salah?","answer":"Mohamed Salah is an Egyptian forward who plays for Liverpool and is one of the top scorers in the Premier League."}
-{"question":"Who is Harry Kane?","answer":"Harry Kane is an English striker who plays for Bayern Munich and captains England."}
-{"question":"Who is Luka Modric?","answer":"Luka Modric is a Croatian midfielder who plays for Real Madrid and won the Ballon d'Or in 2018."}
-{"question":"Who is Neymar Jr?","answer":"Neymar Jr is a Brazilian forward known for his dribbling who plays for Al-Hilal."}
-{"question":"Who won the 2022 FIFA World Cup?","answer":"Argentina won the 2022 FIFA World Cup in Qatar, led by Lionel Messi."}
-{"question":"Who won the 2018 FIFA World Cup?","answer":"France won the 2018 FIFA World Cup in Russia."}
-{"question":"Who won the 2014 FIFA World Cup?","answer":"Germany won the 2014 FIFA World Cup in Brazil."}
-{"question":"Who won the 2010 FIFA World Cup?","answer":"Spain won the 2010 FIFA World Cup in South Africa."}
-{"question":"What position does Erling Haaland play?","answer":"Erling Haaland plays as a striker or forward."}
-{"question":"What position does Kevin De Bruyne play?","answer":"Kevin De Bruyne plays as a midfielder."}
-{"question":"What position does Virgil van Dijk play?","answer":"Virgil van Dijk plays as a center back."}
-{"question":"What position does Alisson Becker play?","answer":"Alisson Becker plays as a goalkeeper."}
-{"question":"Who plays for Manchester City?","answer":"Manchester City has players like Erling Haaland, Kevin De Bruyne, and Ederson."}
-{"question":"Who plays for Real Madrid?","answer":"Real Madrid has players like Kylian Mbappe, Jude Bellingham, and Luka Modric."}
+{"question":"What is Artemis II?","answer":"Artemis II is NASA's mission that sent four astronauts around the Moon and back in April 2026. It was the first crewed Moon mission since Apollo 17 in 1972."}
+{"question":"When was Artemis II launched?","answer":"Artemis II launched on April 1, 2026 from NASA's Kennedy Space Center in Florida."}
+{"question":"How many astronauts flew on Artemis II?","answer":"Four astronauts flew on Artemis II: three from NASA and one from the Canadian Space Agency."}
+{"question":"Who are the Artemis II astronauts?","answer":"The Artemis II crew was Reid Wiseman, Victor Glover, and Christina Koch from NASA, plus Jeremy Hansen from the Canadian Space Agency."}
+{"question":"What record did Artemis II set?","answer":"Artemis II set a record for the furthest distance humans have travelled from Earth, reaching about 252,756 miles from home."}
+{"question":"What rocket launched Artemis II?","answer":"Artemis II launched on NASA's powerful Space Launch System rocket, also called SLS."}
+{"question":"What is TOI-700e?","answer":"TOI-700e is a rocky exoplanet about 100 light-years from Earth. In 2026, scientists using the James Webb Space Telescope found water vapor and carbon dioxide in its atmosphere."}
+{"question":"What is the James Webb Space Telescope?","answer":"The James Webb Space Telescope is the most powerful space telescope ever built. It has been operating since 2022 and helps scientists study distant galaxies and exoplanet atmospheres."}
+{"question":"What did the JUICE mission discover about Europa?","answer":"During its early 2026 flyby, the JUICE mission confirmed that Jupiter's moon Europa has a vast liquid water ocean about 100 kilometers deep beneath its icy crust."}
+{"question":"What is Europa?","answer":"Europa is one of Jupiter's four large moons. It has a thick icy surface with a huge liquid water ocean underneath, making it one of the best places to search for life."}
+{"question":"Is there life on Europa?","answer":"We don't know yet, but Europa's underground ocean touches a rocky seafloor. On Earth, similar places have hydrothermal vents where life thrives, so scientists think Europa is a strong candidate."}
+{"question":"What is JUICE?","answer":"JUICE is the European Space Agency's Jupiter Icy Moons Explorer. It is studying Jupiter and its large icy moons Europa, Ganymede, and Callisto."}
+{"question":"What is 3I/ATLAS?","answer":"3I/ATLAS is the third known interstellar comet ever discovered. It was found in July 2025 and is thought to be about 7 billion years old, older than the Sun itself."}
+{"question":"What is an interstellar comet?","answer":"An interstellar comet is a comet that came from another star system, not our own. Only three have ever been found: 1I/Oumuamua, 2I/Borisov, and 3I/ATLAS."}
+{"question":"What did scientists discover about Uranus's moon Ariel in 2026?","answer":"Scientists found evidence that Uranus's moon Ariel may have once had a hidden underground ocean more than 100 miles deep beneath its cracked icy surface."}
+{"question":"What was discovered on Saturn in 2026?","answer":"In September 2026, the Hubble Space Telescope found a giant 10-sided atmospheric wave circling Saturn's south pole, similar to Saturn's famous hexagon at its north pole."}
+{"question":"What is Saturn's hexagon?","answer":"Saturn's hexagon is a huge six-sided storm pattern at the planet's north pole. It has been swirling there for decades and remains one of the strangest weather features in our solar system."}
+{"question":"What did meteorites reveal about the early solar system?","answer":"In 2026, scientists studying ancient meteorite grains discovered that a surprisingly strong magnetic field existed during the solar system's first few million years, helping build the planets."}
+{"question":"How many planets are in the solar system?","answer":"There are eight planets in the solar system: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune."}
+{"question":"What is Mercury?","answer":"Mercury is the smallest planet and the closest one to the Sun. A year on Mercury lasts only about 88 Earth days."}
+{"question":"What is Venus?","answer":"Venus is the second planet from the Sun and the hottest planet in our solar system. Its thick atmosphere traps heat and pushes surface temperatures to about 465 degrees Celsius."}
+{"question":"What is Earth?","answer":"Earth is the third planet from the Sun and the only known planet with life. It has one natural moon and is mostly covered in liquid water."}
+{"question":"What is Mars?","answer":"Mars is the fourth planet from the Sun and is called the Red Planet because of the iron oxide in its dust. It has two small moons named Phobos and Deimos."}
+{"question":"What is Jupiter?","answer":"Jupiter is the largest planet in our solar system and a gas giant. It is famous for its Great Red Spot, a storm bigger than Earth that has raged for centuries."}
+{"question":"What is Saturn?","answer":"Saturn is the sixth planet from the Sun and is famous for its beautiful ring system made of ice and rock particles."}
+{"question":"What is Uranus?","answer":"Uranus is the seventh planet from the Sun and is unique because it rotates on its side. This gives it extreme seasons that last for decades."}
+{"question":"What is Neptune?","answer":"Neptune is the eighth and farthest planet from the Sun. It is a cold, windy blue gas giant with the fastest winds in the solar system."}
+{"question":"What is the Sun?","answer":"The Sun is the star at the centre of our solar system, made mostly of hydrogen and helium. Its heat and light make life on Earth possible."}
+{"question":"What is Pluto?","answer":"Pluto is a dwarf planet in the Kuiper Belt. It was considered the ninth planet until 2006, when scientists reclassified it as a dwarf planet."}
+{"question":"What is the Moon?","answer":"The Moon is Earth's only natural satellite. It is about 384,000 kilometres away and its gravity controls Earth's ocean tides."}
+{"question":"Who was the first person to walk on the Moon?","answer":"Neil Armstrong was the first person to walk on the Moon on July 20, 1969, during the Apollo 11 mission."}
+{"question":"What is Chang'e 7?","answer":"Chang'e 7 is a Chinese Moon lander mission planned for 2026. It will explore the Moon's south pole, where scientists have found signs of water ice hidden in dark craters."}
+{"question":"What is the Roman Space Telescope?","answer":"The Nancy Grace Roman Space Telescope is a new NASA telescope planned to launch in late 2026. Its camera can view areas of sky 100 times larger than Hubble at similar sharpness."}
+{"question":"What is the Plato mission?","answer":"Plato is a European Space Agency mission launching in late 2026. It will use 26 cameras to search for rocky exoplanets similar to Earth around Sun-like stars."}
+{"question":"What is the Kuiper Belt?","answer":"The Kuiper Belt is a huge ring of icy objects and dwarf planets located beyond Neptune, at the edge of our solar system. Pluto is one of its most famous residents."}
+{"question":"What is the asteroid belt?","answer":"The asteroid belt is a region of space between Mars and Jupiter that is filled with rocky objects called asteroids."}
+{"question":"How many exoplanets have been discovered?","answer":"Astronomers have confirmed more than 6,000 exoplanets, which are planets orbiting stars other than our Sun."}
+{"question":"What is dark matter?","answer":"Dark matter is an invisible substance that makes up most of the mass in the universe. We cannot see it directly, but we know it exists because of how galaxies move."}
+{"question":"What is a black hole?","answer":"A black hole is a region of space where gravity is so strong that not even light can escape from it."}
+{"question":"What is the Milky Way?","answer":"The Milky Way is the galaxy that contains our solar system. It has hundreds of billions of stars and is shaped like a giant spiral."}
+{"question":"What is Titan?","answer":"Titan is the largest moon of Saturn and is larger than the planet Mercury. It has a thick atmosphere and lakes of liquid methane on its surface."}
+{"question":"How long does it take Earth to orbit the Sun?","answer":"Earth takes about 365 and a quarter days to orbit the Sun, which is why we add a leap day every four years."}

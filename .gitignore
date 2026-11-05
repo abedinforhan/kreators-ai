@@ -1,9 +1,5 @@
 .venv/
-<<<<<<< HEAD
-my-ai/
-=======
 my-ai-trained-brain/
->>>>>>> d2aae20 (fixed the issues)
 training_checkpoints/
 __pycache__/
 *.pyc
