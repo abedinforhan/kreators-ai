@@ -1,16 +1,38 @@
+<<<<<<< HEAD
+=======
+# ============================================================
+# TEST.PY - Talk to your TRAINED AI
+# ============================================================
+# This loads the AI that has learned from your data,
+# and lets you ask it questions to see what it learned.
+# ============================================================
+
+>>>>>>> d2aae20 (fixed the issues)
 import os
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from peft import PeftModel
 
+<<<<<<< HEAD
 BASE_MODEL = "Qwen/Qwen3-0.6B"
 ADAPTER = "my-ai"
 
 print("Loading AI...")
+=======
+import os
+BASE_MODEL = os.environ.get("KREATORS_BASE_MODEL", "Qwen/Qwen3-0.6B")
+TRAINED_BRAIN = "my-ai-trained-brain"
+
+# ------------------------------------------------------------
+# STEP 1: Load the base brain + the learning notebook you trained
+# ------------------------------------------------------------
+print("Loading your trained AI...")
+>>>>>>> d2aae20 (fixed the issues)
 
 tokenizer = AutoTokenizer.from_pretrained(BASE_MODEL)
 base_model = AutoModelForCausalLM.from_pretrained(BASE_MODEL)
 
+<<<<<<< HEAD
 have_trained_ai = os.path.exists(f"{ADAPTER}/adapter_config.json")
 
 if have_trained_ai:
@@ -20,19 +42,48 @@ else:
     model = base_model
     print("This is the untrained BASE Qwen model (nothing learned from your data yet).")
     print("Train it first to see the difference.")
+=======
+have_trained_ai = os.path.exists(f"{TRAINED_BRAIN}/adapter_config.json")
+
+if have_trained_ai:
+    # PeftModel combines the base brain + your trained learning notebook
+    model = PeftModel.from_pretrained(base_model, TRAINED_BRAIN)
+    print("Loaded your TRAINED AI (base brain + your learning).")
+else:
+    print("WARNING: No trained AI found yet!")
+    print(f"Missing folder: {TRAINED_BRAIN}")
+    print("Please train your AI first (option [1] in the menu).")
+    print()
+    print("For now, this will show you the untrained base brain.")
+    model = base_model
+>>>>>>> d2aae20 (fixed the issues)
 
 model.eval()
 print()
 
 
+<<<<<<< HEAD
 def answer(question):
     prompt = f"Question: {question}\nAnswer:"
     inputs = tokenizer(prompt, return_tensors="pt")
 
+=======
+# ------------------------------------------------------------
+# STEP 2: The function that asks the AI a question
+# ------------------------------------------------------------
+def answer(question):
+    """Feed a question to the AI and get back its answer + confidence."""
+    # Format the question the same way we trained on
+    prompt = f"Question: {question}\nAnswer:"
+    inputs = tokenizer(prompt, return_tensors="pt")
+
+    # Ask the AI to generate an answer (up to 60 tokens)
+>>>>>>> d2aae20 (fixed the issues)
     with torch.no_grad():
         outputs = model.generate(
             **inputs,
             max_new_tokens=60,
+<<<<<<< HEAD
             do_sample=False,
             repetition_penalty=1.3,
             pad_token_id=tokenizer.eos_token_id,
@@ -42,6 +93,18 @@ def answer(question):
     reply = full.split("Answer:", 1)[-1].strip()
 
     # Compute average confidence per generated token
+=======
+            do_sample=False,              # Same question always gets same answer
+            repetition_penalty=1.3,       # Discourage repeating itself
+            pad_token_id=tokenizer.eos_token_id,
+        )
+
+    # Extract just the answer part (strip out the question prefix)
+    full = tokenizer.decode(outputs[0], skip_special_tokens=True)
+    reply = full.split("Answer:", 1)[-1].strip()
+
+    # Calculate how confident the AI was, on average, in its answer
+>>>>>>> d2aae20 (fixed the issues)
     with torch.no_grad():
         gen_ids = outputs[0][inputs["input_ids"].shape[-1]:]
         logits = model(outputs).logits[0, inputs["input_ids"].shape[-1] - 1:-1]
@@ -52,9 +115,18 @@ def answer(question):
     return reply, confidence
 
 
+<<<<<<< HEAD
 while True:
     print("=" * 50)
     print("             TEST YOUR AI")
+=======
+# ------------------------------------------------------------
+# STEP 3: Interactive loop - ask as many questions as you want
+# ------------------------------------------------------------
+while True:
+    print("=" * 50)
+    print("         TEST YOUR TRAINED AI")
+>>>>>>> d2aae20 (fixed the issues)
     print("=" * 50)
     print()
 
@@ -68,7 +140,11 @@ while True:
     reply, confidence = answer(question)
 
     print()
+<<<<<<< HEAD
     print("YOUR AI SAYS:")
+=======
+    print("YOUR TRAINED AI SAYS:")
+>>>>>>> d2aae20 (fixed the issues)
     print()
     print(f"  {reply}")
     print()
